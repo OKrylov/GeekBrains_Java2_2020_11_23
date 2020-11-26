@@ -49,6 +49,9 @@ public class Competition {
 
     private boolean passAllObstacles(Participant participant) {
         for (Obstacle obstacle : obstacles) {
+//            if (!obstacle.passObstacleBy(participant)) {
+//                return false;
+//            }
             if ( !participant.doIt(obstacle) ) {
                 return false;
             }

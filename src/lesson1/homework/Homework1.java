@@ -25,7 +25,7 @@ public class Homework1 {
     }
 
     private static Competition createAndPrepareCompetition() {
-        Participant person = new Person("Oleg", 50, 500);
+        Participant person = new Person("Oleg", 500, 500);
         Participant cat = new Cat("Barsik", 200, 1500);
         Participant robot = new Robot("Altron", 150, 5000);
 

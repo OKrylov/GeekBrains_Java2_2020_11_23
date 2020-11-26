@@ -13,7 +13,7 @@ public class Wall implements Obstacle {
 
     @Override
     public boolean passObstacleBy(Participant participant) {
-        if (participant.jump() > height) {
+        if (participant.jump() >= height) {
             System.out.println("Участник " + participant + " успешно перепрыгнул стену");
             return true;
         }
