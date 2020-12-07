@@ -2,6 +2,8 @@ package lesson3.homework;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
 
 public class Task1 {
 
@@ -22,11 +24,11 @@ public class Task1 {
     public static void main(String[] args) {
         Map<String, Integer> frequencyByWord = new LinkedHashMap<>();
         for (String word : INPUT_DATA) {
-//            Integer frequency = frequencyByWord.get(word);
-//            if (frequency == null) {
-//                frequency = 0;
-//            }
-//            frequencyByWord.put(word, ++frequency);
+            Integer frequency = frequencyByWord.get(word);
+            if (frequency == null) {
+                frequency = 0;
+            }
+            frequencyByWord.put(word, ++frequency);
 
 //            Integer frequency = frequencyByWord.getOrDefault(word, 0);
 //            frequencyByWord.put(word, frequency + 1);
@@ -38,20 +40,21 @@ public class Task1 {
 //                }
 //            });
 //            frequencyByWord.merge(word, 1, (oldValue, newValue) -> oldValue + newValue);
-            frequencyByWord.merge(word, 1, Integer::sum);
+//            frequencyByWord.merge(word, 1, Integer::sum);
         }
 
-//        for (String word : frequencyByWord.keySet()) {
-//            Integer frequency = frequencyByWord.get(word);
-//            System.out.println(word + ": " + frequency);
-//        }
-
-        frequencyByWord.forEach((word, frequency) -> {
+        for (String word : frequencyByWord.keySet()) {
+            Integer frequency = frequencyByWord.get(word);
             System.out.println(word + ": " + frequency);
-        });
+        }
 
 //        for (Map.Entry<String, Integer> entry : frequencyByWord.entrySet()) {
 //            System.out.println(entry.getKey() + ": " + entry.getValue());
 //        }
+
+//        frequencyByWord.forEach((word, frequency) -> {
+//            System.out.println(word + ": " + frequency);
+//        });
+
     }
 }
