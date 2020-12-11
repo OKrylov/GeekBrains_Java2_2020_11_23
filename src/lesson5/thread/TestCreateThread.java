@@ -57,10 +57,11 @@ public class TestCreateThread {
                 }
             }, "Поток 2");
         thread2.setPriority(Thread.MIN_PRIORITY);
+//        thread1.setDaemon(true);
         thread1.start();
-        thread2.start();
+//        thread2.start();
 
-        thread1.interrupt();
+//        thread1.interrupt();
 
 //        thread1.join();
 //        thread2.join();
@@ -72,9 +73,9 @@ public class TestCreateThread {
 //        Thread.sleep(10);
 //        thread1.interrupt();
 
-        while (thread1.isAlive()) {
-            Thread.sleep(10);
-        }
+//        while (thread1.isAlive()) {
+//            Thread.sleep(10);
+//        }
 //        thread1.join();
 
 //        System.out.println("finish");

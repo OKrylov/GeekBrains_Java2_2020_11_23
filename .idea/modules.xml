@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GeekBrains_Java2_2020_11_23.iml" filepath="$PROJECT_DIR$/GeekBrains_Java2_2020_11_23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NetworkChatClient/NetworkChatClient.iml" filepath="$PROJECT_DIR$/NetworkChatClient/NetworkChatClient.iml" />
     </modules>
   </component>
 </project>

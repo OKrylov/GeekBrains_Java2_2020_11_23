@@ -14,6 +14,7 @@ public class Homework {
 
         float[] data2 = createArray(SIZE);
         measureTime(() -> parallelMethod(data2), "parallelMethod");
+
         System.out.println("Arrays are equal: " + Arrays.equals(data1, data2));
     }
 
@@ -49,7 +50,6 @@ public class Homework {
 
         System.arraycopy(part1, 0, data, 0, HALF_SIZE);
         System.arraycopy(part2, 0, data, HALF_SIZE, HALF_SIZE);
-
     }
 
     private static float[] createArray(int size) {
